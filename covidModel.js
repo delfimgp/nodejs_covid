@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 //schema
 var bioSchema = mongoose.Schema({
-    data: {
+    dia: {
         type: String,
         required: true
     },

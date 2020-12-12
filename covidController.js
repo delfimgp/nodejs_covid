@@ -20,7 +20,7 @@ exports.index = function (req, res) {
 //Criar nova BIO
 exports.add = function (req, res) {
     var bio = new Bio();
-    bio.data = req.body.data? req.body.data: bio.data;
+    bio.dia = req.body.dia? req.body.dia: bio.dia;
     bio.valor = req.body.valor;
 
     //Guardar e verificar erros
@@ -52,7 +52,7 @@ exports.update = function (req, res) {
     Bio.findById(req.params.bio_id, function (err, bio) {
         if (err)
             res.send(err);
-        bio.data = req.body.data ? req.body.data : bio.data;
+        bio.dia = req.body.dia ? req.body.dia : bio.dia;
         bio.valor = req.body.valor;
     
         //Guardar e verificar erros
